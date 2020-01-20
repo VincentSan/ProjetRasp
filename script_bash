@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#Format YYYY-MM-DD hh:mm:ss TEMPERATURE en C
+echo $(date +%Y-%m-%d) $(date +%H:%M:%S) $(/opt/vc/bin/vcgencmd measure_temp)
