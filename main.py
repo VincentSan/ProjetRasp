@@ -54,6 +54,7 @@ conn.close() #Ferme la base
 #Si on doit lever une alert
 if float(temp) > 79.0:
     # run_script('./alert_bash ' + str(date) + " " + str(temp))
+    #JsonMessage est de type dict
     jsonMessage = {
                     "embeds": [
                         {
