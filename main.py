@@ -29,5 +29,5 @@ conn.commit() #Commit les modification
 conn.close() #Ferme la base
 
 #Si on doit lever une alert
-if temp > 79:
-    run_script('./alert_bash ' + date + " " + temp)
+if float(temp) > 79.0:
+    run_script('./alert_bash ' + str(date) + " " + str(temp))
