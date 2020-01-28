@@ -27,3 +27,7 @@ cursor = conn.cursor()
 cursor.execute(""" INSERT INTO `TEMPERATURE_CPU_CP` (`CP_TIME`, `CP_TEMP`) VALUES (%s, %s) """, inser)
 conn.commit() #Commit les modification
 conn.close() #Ferme la base
+
+#Si on doit lever une alert
+if temp > 79:
+    run_script('./alert_bash ' + date + " " + temp)

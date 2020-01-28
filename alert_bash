@@ -1,0 +1,14 @@
+curl -X POST -H 'Content-type: application/json' --data '{
+  "embeds": [
+    {
+    "footer": {
+      "text": "$1",
+      "icon_url": "https://vignette.wikia.nocookie.net/spiderriders/images/d/dd/Discord.png/revision/latest?cb=20171218232913"},
+    "thumbnail": {
+      "url": "http://ec.europa.eu/eurostat/cache/infographs/youthday2016/img/embed.png"},
+    "title": "[ALERT] Problème avec le RasberryPI 3",
+    "description": "Température actuel : $2 °C.\n\n\n[🚀 GRAFANA \n](http://framboise:3000)\n",
+    "color": 16711680
+  }
+ ]
+}' https://discordapp.com/api/webhooks/671701158762381312/755iMDImb81OBUfntGtbgePsharHTypVLA_P8jAUT0ABvsNYLHUXrDNuLyqYq2fo3-GG
