@@ -22,7 +22,7 @@ def run_script(script):
 #Pour envoyer des messages au chat discord
 def message(jsonFile):
     #URL Webhooks
-    url = 'https://discordapp.com/api/webhooks/671701158762381312/755iMDImb81OBUfntGtbgePsharHTypVLA_P8jAUT0ABvsNYLHUXrDNuLyqYq2fo3-GG'
+    url = 'URL-NAME'
     bot_message = jsonFile
 
     message_headers = { 'Content-Type': 'application/json; charset=UTF-8'}
@@ -53,18 +53,17 @@ conn.close() #Ferme la base
 
 #Si on doit lever une alert
 if float(temp) > 79.0:
-    # run_script('./alert_bash ' + str(date) + " " + str(temp))
     #JsonMessage est de type dict
     jsonMessage = {
                     "embeds": [
                         {
                         "footer": {
-                        "text": "DATE + HEURE",
+                        "text": "{0}".format(date),
                         "icon_url": "https://vignette.wikia.nocookie.net/spiderriders/images/d/dd/Discord.png/revision/latest?cb=20171218232913"},
                         "thumbnail": {
                         "url": "http://ec.europa.eu/eurostat/cache/infographs/youthday2016/img/embed.png"},
                         "title": "[ALERT] Problème avec le RasberryPI 3",
-                        "description": "Température actuel : °C.\n\n\n[🚀 GRAFANA \n](http://framboise:3000)\n",
+                        "description": "Température actuel : {0}°C.\n\n\n[🚀 GRAFANA \n](http://framboise:3000)\n".format(temp),
                         "color": 16711680
                     }
                     ]
